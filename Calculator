@@ -7,7 +7,7 @@ def multiply(x, y):
     return x * y
 def divide(x, y):
     if y == 0:
-        return "Sorry, ya' can't divide by zero!"
+        return "Sorry, but ya' can't divide by zero!"
     else: return x / y
     print("Select the operation you desire to perform.")
     print("1. Addition")
