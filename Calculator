@@ -15,8 +15,8 @@ print("2. Subtraction")
 print("3. Multiplication")
 print("4. Division")
 desired_operation = input("select the operation you wish to perform.")
-number1 = float(input)
-number2 = float(input)
+number1 = float(input())
+number2 = float(input())
 if desired_operation == '1':
     print(number1, "+", number2, "=", add(number1, number2))
 elif desired_operation == '2':
