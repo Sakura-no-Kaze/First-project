@@ -16,8 +16,14 @@ print("3. Multiplication")
 print("4. Division")
 print("5. Exit")
 desired_operation = input("select the operation you wish to perform.")
+
+if desired_operation == '5':
+    print("じゃね!")
+    exit()
+
 number1 = float(input())
 number2 = float(input())
+
 if desired_operation == '1':
     print(number1, "+", number2, "=", add(number1, number2))
 elif desired_operation == '2':
@@ -26,9 +32,6 @@ elif desired_operation == '3':
     print(number1, "*", number2, "=", multiply(number1, number2))
 elif desired_operation == '4':
     print(number1, "/", number2, "=", divide(number1, number2))
-elif desired_operation == '5':
-    print("じゃね!")
-    SystemExit
 else:
     print("invalid input")
-    SystemExit
+    exit()
