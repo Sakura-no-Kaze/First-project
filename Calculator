@@ -7,13 +7,14 @@ def multiply(x, y):
     return x * y
 def divide(x, y):
     if y == 0:
-        return "Sorry, but ya' can't divide by zero!"
+        return "Sorry, but you can't divide by zero!"
     else: return x / y
 print("Select the operation you desire to perform.")
 print("1. Addition")
 print("2. Subtraction")
 print("3. Multiplication")
 print("4. Division")
+print("5. Exit")
 desired_operation = input("select the operation you wish to perform.")
 number1 = float(input())
 number2 = float(input())
@@ -27,5 +28,7 @@ elif desired_operation == '4':
     print(number1, "/", number2, "=", divide(number1, number2))
 elif desired_operation == '5':
     print("じゃね!")
+    SystemExit
 else:
     print("invalid input")
+    SystemExit
