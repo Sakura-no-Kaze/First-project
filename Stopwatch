@@ -1,9 +1,9 @@
-print ("This is a stopwatch, and it will stop when you enter 'Stop'.")
-import time
-starting_time = time.time()
+print ("This is a Stopwatch, and it will stop when you enter 'Stop please'.")
+import time as Tm
+starting_time = Tm.time()
 while True:
-    if input() == 'Stop':
+    if input() == 'Stop please':
         break
     else:
-        passed_time = time.time() - starting_time
+        passed_time = Tm.time() - starting_time
         print("Current timeelapsed: " + str(passed_time) + "Seconds")
