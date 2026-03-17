@@ -19,7 +19,7 @@ else:
 guess = int(input("Guess a number between 1 and 100: "))
 
 while attempts > 0 and guess != random_number:
-    print("Wrong guess, you have " + str(attempts) + " attempts left.")
+    print("Incorrect, you have " + str(attempts) + " attempts left.")
     if guess < random_number:
         print("Too low")
     elif guess > random_number:
