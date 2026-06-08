@@ -7,7 +7,7 @@ root.geometry("3000x2000")
 label = tk.Label(root, text="Hello, press the button to exit!", font=("Bold", 20))
 label.pack(pady=20)
 
-button = tk.Button(root, text="Click to Exit", command=root.quit)
-button.pack()
+button1 = tk.Button(root, text="Click to Exit", command=root.quit)
+button1.pack()
 
 root.mainloop()
