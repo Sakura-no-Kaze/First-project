@@ -15,7 +15,7 @@ print("2. Subtraction")
 print("3. Multiplication")
 print("4. Division")
 print("5. Exit")
-desired_operation = input("select the operation you wish to perform.")
+desired_operation = input("Select the operation you wish to perform.")
 
 if desired_operation == '5':
     print("See you later!")
@@ -25,14 +25,14 @@ if desired_operation not in ['1', '2', '3', '4', '5']:
     print('Invalid input')
     exit()
 
-number1 = float(input())
-number2 = float(input())
+Number1 = float(input())
+Number2 = float(input())
 
 if desired_operation == '1':
-    print(number1, "+", number2, "=", add(number1, number2))
+    print(Number1, "+", Number2, "=", add(Number1, Number2))
 elif desired_operation == '2':
-    print(number1, "-", number2, "=", subtract(number1, number2))
+    print(Number1, "-", Number2, "=", subtract(Number1, Number2))
 elif desired_operation == '3':
-    print(number1, "*", number2, "=", multiply(number1, number2))
+    print(Number1, "*", Number2, "=", multiply(Number1, Number2))
 elif desired_operation == '4':
-    print(number1, "/", number2, "=", divide(number1, number2))
+    print(Number1, "/", Number2, "=", divide(Number1, Number2))
