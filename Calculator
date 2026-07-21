@@ -1,4 +1,4 @@
-print("こんにちは! Here is a simple calculator!")
+print("Hello! Here is a simple calculator!")
 def add(x, y):
     return x + y
 def subtract(x, y):
@@ -18,7 +18,7 @@ print("5. Exit")
 desired_operation = input("select the operation you wish to perform.")
 
 if desired_operation == '5':
-    print("じゃね!")
+    print("See you later!")
     exit()
 
 if desired_operation not in ['1', '2', '3', '4', '5']:
