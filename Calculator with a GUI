@@ -25,13 +25,13 @@ def calculate(operator):
         result_variable.set("Enter numbers")
         return
 
-    if operator == "Add":
+    if operator == "+":
         answer = calcnumber1 + calcnumber2
-    elif operator == "Subtract":
+    elif operator == "-":
         answer = calcnumber1 - calcnumber2
-    elif operator == "Multiply":
+    elif operator == "X":
         answer = calcnumber1 * calcnumber2
-    elif operator == "Divide":
+    elif operator == "/":
         if calcnumber2 == 0:
             result_variable.set("You can't divide by 0")
             return
@@ -42,7 +42,7 @@ def calculate(operator):
 button_frame = tk.Frame(root, bg="lightpink")
 button_frame.pack()
 
-for operator in ["Add", "Subtract", "Multiply", "Divide"]:
-    tk.Button(button_frame, text=operator, width=2, command=lambda operator: calculate()).pack(side="left", padx=5)
+for operator in ["+", "-", "X", "/"]:
+    tk.Button(button_frame, text=operator, width=2, command=lambda op=operator: calculate(op)).pack(side="left", padx=5)
 
 root.mainloop()
