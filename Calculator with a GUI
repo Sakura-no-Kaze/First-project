@@ -7,7 +7,12 @@ root.geometry("300x400")
 root.configure(bg="lightpink")
 root.resizable(True, True)
 
-calctext1 = tk.Button(root, text="1", font=("Bold", 30), width=6, height=2)
+calctext1 = tk.Entry(root, font=("Bold", 30), width=5)
 calctext1.pack()
+
+calctext2 = tk.Entry(root, font=("Bold", 30), width=5)
+calctext2.pack()
+
+result = tk.Label()
 
 root.mainloop()
