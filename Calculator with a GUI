@@ -5,44 +5,44 @@ root.title("Calculator")
 root.geometry("300x400")
 root.configure(bg="lightpink")
 
-tk.Label(root, text="First number", bg="lightpink").pack(pady=(10, 0))
+tk.Label(root, text="Calcnumber1", bg="lightpink").pack(pady=(10, 0))
 calctext1 = tk.Entry(root, font=("Bold", 20), width=10)
-calctext1.pack(pady=5)
+calctext1.pack()
 
-tk.Label(root, text="Second number", bg="lightpink").pack(pady=(10, 0))
+tk.Label(root, text="Calcnumber2", bg="lightpink").pack(pady=(10, 0))
 calctext2 = tk.Entry(root, font=("Bold", 20), width=10)
-calctext2.pack(pady=5)
+calctext2.pack()
 
 result_variable = tk.StringVar()
 result_label = tk.Label(root, textvariable=result_variable, font=("Bold", 20), bg="lightpink")
-result_label.pack(pady=20)
+result_label.pack()
 
 def calculate(operator):
     try:
-        num1 = float(calctext1.get())
-        num2 = float(calctext2.get())
+        calcnumber1 = float(calctext1.get())
+        calcnumber2 = float(calctext2.get())
     except ValueError:
         result_variable.set("Enter numbers")
         return
 
-    if operator == "+":
-        answer = num1 + num2
-    elif operator == "-":
-        answer = num1 - num2
-    elif operator == "*":
-        answer = num1 * num2
-    elif operator == "/":
-        if num2 == 0:
-            result_variable.set("Cannot divide by 0")
+    if operator == "Add":
+        answer = calcnumber1 + calcnumber2
+    elif operator == "Subtract":
+        answer = calcnumber1 - calcnumber2
+    elif operator == "Multiply":
+        answer = calcnumber1 * calcnumber2
+    elif operator == "Divide":
+        if calcnumber2 == 0:
+            result_variable.set("You can't divide by 0")
             return
-        answer = num1 / num2
+        answer = calcnumber1 / calcnumber2
 
     result_variable.set(f"Result: {answer}")
 
 button_frame = tk.Frame(root, bg="lightpink")
-button_frame.pack(pady=10)
+button_frame.pack()
 
-for operator in ["+", "-", "*", "/"]:
+for operator in ["Add", "Subtract", "Multiply", "Divide"]:
     tk.Button(button_frame, text=operator, width=3, command=lambda op=operator: calculate(op)).pack(side="left", padx=5)
 
 root.mainloop()
